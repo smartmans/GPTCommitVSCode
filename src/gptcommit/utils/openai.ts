@@ -22,11 +22,11 @@ export const generateCommitMessage = async (
 
     const { data } = await openAI.createChatCompletion(
         {
-            model: 'gpt-3.5-turbo',
+            model: 'gpt-3.5-turbo-16k',
             messages: messages,
-            temperature: 0,
-            ['top_p']: 0.1,
-            ['max_tokens']: 196
+            temperature: 1,
+            ['top_p']: 1,
+            ['max_tokens']: 2048 
         }
     );
 
